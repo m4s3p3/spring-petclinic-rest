@@ -22,14 +22,6 @@ pipeline {
     }
 
     stages {
-        stage('Checkout') {
-            steps {
-                // Descarga el código de tu repositorio (Asegúrate de que esta URL es la de tu fork)
-                // Cambia 'main' por 'master' si tu rama principal se llama así
-                git branch: 'main', url: 'https://github.com/m4s3p3/spring-petclinic-rest.git'
-            }
-        }
-
         stage('Build, Test & Analyze') {
             steps {
                 script {
