@@ -25,9 +25,8 @@ pipeline {
         stage('Build, Test & Analyze') {
             steps {
                 script {
-                    // Este es el comando "mágico" que te funcionó, adaptado a Jenkins
-                    // Usamos 'bat' porque estás en Windows
-                    bat "mvn clean verify jacoco:report sonar:sonar -Dsonar.projectKey=${PROJECT_KEY} -Dsonar.host.url=${SONAR_HOST} -Dsonar.token=${SONAR_TOKEN}"
+                    // Usamos 'sh' porque Jenkins corre en Linux (Docker)
+                    sh "mvn clean verify jacoco:report sonar:sonar -Dsonar.projectKey=${PROJECT_KEY} -Dsonar.host.url=${SONAR_HOST} -Dsonar.token=${SONAR_TOKEN}"
                 }
             }
         }
