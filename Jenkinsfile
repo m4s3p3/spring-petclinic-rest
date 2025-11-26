@@ -26,7 +26,7 @@ pipeline {
             steps {
                 // Descarga el código de tu repositorio (Asegúrate de que esta URL es la de tu fork)
                 // Cambia 'main' por 'master' si tu rama principal se llama así
-                git branch: 'main', url: 'https://github.com/TU_USUARIO/spring-petclinic-rest.git'
+                git branch: 'main', url: 'https://github.com/m4s3p3/spring-petclinic-rest.git'
             }
         }
 
