@@ -12,10 +12,7 @@ pipeline {
         // Tu token que sabemos que funciona (copiado de tu PDF)
         SONAR_TOKEN = 'squ_cafeb7d15918025d1fe900115605437d090e9701'
 
-        // IMPORTANTE:
-        // Si Jenkins está instalado en Windows y Sonar en Docker: usa 'http://localhost:9000'
-        // Si Jenkins TAMBIÉN está en Docker: usa 'http://host.docker.internal:9000'
-        SONAR_HOST = 'http://localhost:9000'
+        SONAR_HOST = 'http://host.docker.internal:9000'
 
         // Clave del proyecto backend
         PROJECT_KEY = 'sonar-project-backend'
